@@ -7,8 +7,8 @@ const message = document.querySelector('#message');
 
 fetch('/quotes').then((response) => {
     response.json().then((data) => {
-        quoteMessage.textContent = data.content;
-        quoteeMessage.textContent = data.quotee;
+        quoteMessage.textContent = '"' + data.content + '"';
+        quoteeMessage.textContent = '-' + data.quotee;
     });
 });
 
@@ -38,5 +38,7 @@ form.addEventListener('submit', (e) => {
         } else {
             message.textContent = 'There was an error. Please try again later.';
         }
+        quoteInput.value = null;
+        quoteeInput.value = null;
     });
 });
