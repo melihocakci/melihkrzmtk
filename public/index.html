@@ -8,25 +8,42 @@
 
     <body>
         <div class="main-content">
-            <h1>melihkrzmtk's quote machine!</h1>
-            <br />
+            <h1 id="headline">melihkrzmtk's quote machine!</h1>
 
-            <p id="quote"></p>
-            <p id="quotee"></p>
+            <div id="quote-section" class="section">
+                <p id="quote"></p>
+                <p id="quotee"></p>
+            </div>
 
-            <br /><br />
+            <div id="input-section" class="section">
+                <p>Enter your own quote!</p>
 
-            <p>Enter your own quote!</p>
+                <form>
+                    <label for="input-1">Quote:</label><br />
+                    <input id="input-1" />
 
-            <form>
-                <label for="input-1">Quote:</label><br />
-                <input id="input-1" /><br />
-                <label for="input-2">Quotee:</label><br />
-                <input id="input-2" /><br /><br />
-                <button>Submit</button>
-            </form>
+                    <label for="input-2">Quotee:</label><br />
+                    <input id="input-2" />
 
-            <p id="message"></p>
+                    <button>Submit</button>
+                </form>
+
+                <p id="message"></p>
+            </div>
+
+            <div id="winners-section" class="section">
+                <h2>Winners of the week!</h2>
+
+                <div class="winners" id="averagefan">
+                    <img src="./img/averagefan.gif" />
+                    <p>average fan quote</p>
+                </div>
+
+                <div class="winners" id="gigachad">
+                    <img src="./img/gigachad-chad.gif" />
+                    <p>gigachad quote</p>
+                </div>
+            </div>
         </div>
 
         <script src="/js/script.js"></script>
