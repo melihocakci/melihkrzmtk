@@ -4,11 +4,14 @@ const quoteeInput = document.querySelector('#input-2');
 const quoteMessage = document.querySelector('#quote');
 const quoteeMessage = document.querySelector('#quotee');
 const message = document.querySelector('#message');
+const upvote = document.querySelector('#upvote');
+const downvote = document.querySelector('#downvote');
 
 fetch('/quotes').then((response) => {
     response.json().then((data) => {
         quoteMessage.textContent = '"' + data.content + '"';
         quoteeMessage.textContent = '-' + data.quotee;
+        votes.textContent = data.votes;
     });
 });
 

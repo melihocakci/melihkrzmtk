@@ -11,6 +11,10 @@ const Quote = mongoose.model('quotes', {
         required: true,
         trim: true,
     },
+    votes: {
+        type: Number,
+        default: 0,
+    },
 });
 
 module.exports = Quote;
